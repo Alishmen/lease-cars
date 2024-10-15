@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box; 
+    height: 100%;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.3;
+    height: 100%;
 }
 
 *,
@@ -27,7 +29,13 @@ a {
 }
  
 .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.main {
+    flex-grow: 1;
 }
 
 .container {
@@ -38,14 +46,15 @@ a {
 
 .header {
     background-color: #151515;
-    /* background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+
 }
 
 .header-main {
-    /* background-image: url(./../images/header-bg.jpg); */
-    /* background-color: transparent; */
+    background-image: url(./../images/header-bg.jpg);
+    background-color: transparent;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header__inner {
@@ -73,13 +82,17 @@ a {
     padding: 50px 0 32px;
     color: #fff;
 }
+
 .footer__menu {
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
 }
-.footer__menu-list {
+
+.footer__menu-list  {
+    max-width: 250px;
 }
+
 .footer__menu-item + .footer__menu-item  {
     padding-top: 20px;
 }
@@ -89,31 +102,48 @@ a {
     font-size: 24px;
     padding-bottom: 20px;
 }
-.footer__menu-link {
 
-
-}
 .app {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 }
-.app__item {
-}
-.app__item-link {
-}
-.app__item-img {
-}
+
 .footer__copy {
+    margin: 0 auto 30px;
+    max-width: 800px;
+    text-align: center;
+    font-size: 12px;
 }
-.footer__copy-text {
-}
-.nav__copy {
-}
+
 .nav__copy-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
-.nav__copy-item {
+
+.top {
+    color: #fff;
+    text-align: center;
+    padding-top: 105px;
+    padding-bottom: 92px;
 }
-.nav__copy-link {
+.title {
+    padding-bottom: 40px;
+    font-size: 96px;
+    font-weight: 700;
 }
+.top__link {
+    background-color: #151515;
+    padding: 23px;
+    max-width: 430px;
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+
