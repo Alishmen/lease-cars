@@ -267,7 +267,7 @@ a {
 
 .how-does__item {
     list-style-type: none;
-    width: 270px;
+    max-width: 270px;
     position: relative;
     margin-left: auto;
     box-sizing: content-box;
@@ -301,6 +301,10 @@ a {
     padding-bottom: 150px;
 }
 
+iframe {
+
+}
+
 .video__title {
     margin-bottom: 20px;
 }
@@ -312,8 +316,8 @@ a {
 }
 
 .video__content {
-    display: block;
     margin: 0 auto;
+    display: block;
 }
 
 .important {
@@ -328,7 +332,7 @@ a {
     max-width: 580px;
     margin: 0 auto 50px;
 }
-.importanty__list {
+.important__list {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
 }
@@ -411,6 +415,8 @@ a {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 1.3;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -458,11 +464,10 @@ a {
 }
 
 .tabs__btn {
-    padding: 0 150px;
+    padding: 0 150px 100px;
     display: flex;
     justify-content: space-between;
     gap: 80px;
-    padding-bottom: 100px;
 }
 
 .tabs__btn-item {
@@ -496,6 +501,7 @@ a {
 .card__img {
     margin-bottom: 20px;
     border-bottom: 1px solid #0066ff;
+    width: 100%;
 }
 
 .card__title {
@@ -522,3 +528,286 @@ a {
     color: #0066ff;
     border-top: 1px solid #0066ff;
 }
+
+.menu__btn {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__btn span{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+
+}
+
+@media(max-width: 1180px) {
+    .important__list {
+        gap: 30px 20px;
+    }
+    .important__item-img {
+        width: 100%;
+    }
+
+    /* New cars  */
+
+    .tabs__content-item {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media(max-width: 1040px) {
+    .video__content {
+        width: 100%;
+    }
+
+     /* New cars  */
+    .tabs__btn {
+        padding: 0 0 50px;
+        gap: 20px;
+    }
+}
+
+@media(max-width: 860px) {
+
+    .header__inner {
+        align-items: center;
+    }
+    .menu__btn {
+        display: flex;
+    }
+
+    .menu__btn,
+    .logo {
+        position: relative;
+        z-index: 10;
+    }
+
+    .menu__list {
+        z-index: 5;
+        position: absolute;
+        background-color: #151515;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 200px;
+        height: 100vh;
+        transform: translateY(-100%);
+        transition: transform .5s ease;
+    }
+
+    .menu__list.menu__list--active {
+        transform: translateY(0);
+    }
+
+    .why-lease__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .important__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .important__item {
+        max-width: 100%;
+    }
+
+     /* New cars  */
+
+     .tabs__content-item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* New cars  */
+
+    .choose {
+        padding: 50px 0;
+    }
+
+    .tabs__content-item {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .title {
+        font-size: 70px;
+    }
+
+    .top__link {
+        padding: 16px;
+        max-width: 360px;
+        font-size: 28px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 60px;
+    }
+    .swiper-pagination-bullet-active {
+        height: 4px;
+    }
+
+    .video__content {
+        height: 400px;
+    }
+    
+
+    .footer__menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        text-align: center;
+    }
+
+    .blog__items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+@media(max-width: 600px) {
+    /* Contacts */
+
+    .contacts {
+        padding: 50px 0;
+    }
+
+    .contacts__text {
+        padding: 0;
+    }
+
+    .form__input {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 540px) {
+    .title {
+        font-size: 60px;
+    }
+
+    .top__link {
+        max-width: 310px;
+        font-size: 24px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 35px;
+    }
+    
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 10px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .why-lease {
+        padding: 50px 0;
+    }
+
+    .why-lease__list {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .how-does {
+        padding-bottom: 50px;
+    }
+
+    .how-does__title {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .how-does__list {
+        padding: 30px 0 40px;
+    }
+
+    .how-does__item {
+        padding-left: 120px;
+        padding-top: 10px;
+    }
+
+    .how-does__item::before {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    .video {
+        padding-bottom: 50px;
+    }
+
+    .video__content {
+        height: 200px;
+    }
+
+    .important {
+        padding-bottom: 50px;
+    }
+
+    .important__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .app,
+    .nav__copy-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .app {
+        margin-bottom: 20px;
+    }
+
+         /* New cars  */
+
+        .tabs {
+            margin-bottom: 30px;
+        }
+
+         .tabs__content-item {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .tabs__btn {
+        flex-direction: column;
+        }
+
+        .blog {
+            padding-bottom: 50px;
+        }
+
+        .blog__items{
+            margin-bottom: 30px;
+        }
+
+        .blog__item-title {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .blog__item-link {
+            margin: 0 auto;
+            padding: 4px 50px;
+        }
+
+}
+
